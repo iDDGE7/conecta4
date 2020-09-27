@@ -1,0 +1,95 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  .title-game {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+
+  .container-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title-instruction {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      color: rgb(32, 112, 240);
+    }
+
+    .tab-game {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .container-numbers {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .number-column {
+          margin: 0.5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          font-weight: 900;
+          font-size: 1em;
+
+          @media screen and (max-width: 600px) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      .container-cells {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .column-grid {
+          display: flex;
+          flex-direction: column;
+          transition: all 0.2s;
+          cursor: pointer;
+
+          &:hover {
+            background: rgb(89, 243, 243);
+            border-radius: 10px;
+          }
+          .item-column {
+            margin: 0.5em;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+
+            @media screen and (max-width: 600px) {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .turn-user {
+      font-size:2em;
+      font-weight:900;
+      margin-top: 1em;
+      text-transform: uppercase;
+      padding: 0.5em;
+
+      background: rgb(44, 41, 41);
+    }
+
+  }
+}

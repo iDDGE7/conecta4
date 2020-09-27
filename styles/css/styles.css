@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .wrapper .title-game {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em; }
+  .wrapper .container-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .wrapper .container-game .title-instruction {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      color: #2070f0; }
+    .wrapper .container-game .tab-game {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .wrapper .container-game .tab-game .container-numbers {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        .wrapper .container-game .tab-game .container-numbers .number-column {
+          margin: 0.5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          font-weight: 900;
+          font-size: 1em; }
+          @media screen and (max-width: 600px) {
+            .wrapper .container-game .tab-game .container-numbers .number-column {
+              width: 30px;
+              height: 30px; } }
+      .wrapper .container-game .tab-game .container-cells {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .wrapper .container-game .tab-game .container-cells .column-grid {
+          display: flex;
+          flex-direction: column;
+          transition: all 0.2s;
+          cursor: pointer; }
+          .wrapper .container-game .tab-game .container-cells .column-grid:hover {
+            background: #59f3f3;
+            border-radius: 10px; }
+          .wrapper .container-game .tab-game .container-cells .column-grid .item-column {
+            margin: 0.5em;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%; }
+            @media screen and (max-width: 600px) {
+              .wrapper .container-game .tab-game .container-cells .column-grid .item-column {
+                width: 30px;
+                height: 30px; } }
+    .wrapper .container-game .turn-user {
+      font-size: 2em;
+      font-weight: 900;
+      margin-top: 1em;
+      text-transform: uppercase;
+      padding: 0.5em;
+      background: #2c2929; }
+
+.pop-winner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000000e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000; }
+  .pop-winner .user-win {
+    color: white; }
+  .pop-winner .win {
+    color: white; }
+  .pop-winner .button-play-again {
+    margin-top: 1em;
+    background: white;
+    padding: 0.4em;
+    font-weight: 900;
+    font-size: 2em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s; }
+    .pop-winner .button-play-again:hover {
+      background: #161616;
+      color: white;
+      transition: all 0.4s; }
+
+.redWinner {
+  background: #f74a4a; }
+
+.yellowWinner {
+  background: #f7bc4a;
+  color: black; }
+
+.activePopWinner {
+  transform: translateY(0%);
+  animation: activePopWinner 0.5s linear; }
+
+@keyframes activePopWinner {
+  from {
+    transform: translateY(-100%); }
+  to {
+    transform: translateY(0%); } }
+
+.default-popWinner {
+  transform: translateY(-100%); }
+
+.noActivePopWinner {
+  transform: translateY(-100%);
+  animation: noActivePopWinner 0.5s linear; }
+
+@keyframes noActivePopWinner {
+  from {
+    transform: translateY(0%); }
+  to {
+    transform: translateY(-100%); } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  user-select: none; }
+
+.redUser {
+  background: #F74A4A;
+  border: initial;
+  animation: redUser 0.5s linear;
+  transform: rotateY(0); }
+
+@keyframes redUser {
+  from {
+    transform: rotateY(360deg);
+    border: 3px solid black;
+    background-color: white; }
+  to {
+    transform: rotateY(0);
+    background: #F74A4A;
+    border: initial; } }
+
+.yellowUser {
+  background: #F7BC4A;
+  border: initial;
+  animation: yellowUser 0.5s linear;
+  transform: rotateY(0); }
+
+@keyframes yellowUser {
+  from {
+    transform: rotateY(360deg);
+    border: 3px solid black;
+    background-color: white; }
+  to {
+    transform: rotateY(0);
+    background: #F7BC4A;
+    border: initial; } }
+
+.defaultCell {
+  border: 3px solid black;
+  background-color: white; }
+
+.turnRed {
+  color: #F74A4A;
+  animation: turnRed 0.5s linear; }
+
+@keyframes turnRed {
+  from {
+    color: #F7BC4A;
+    transform: rotateY(360deg); }
+  to {
+    color: #F74A4A;
+    transform: rotateY(0); } }
+
+.turnYellow {
+  color: #F7BC4A;
+  animation: turnYellow 0.5s linear; }
+
+@keyframes turnYellow {
+  from {
+    color: #F74A4A;
+    transform: rotateY(360deg); }
+  to {
+    color: #F7BC4A;
+    transform: rotateY(0); } }

@@ -1,0 +1,90 @@
+@import "./components/game";
+@import "./components/winner";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+
+.redUser {
+    background: #F74A4A;
+  border: initial;
+  animation: redUser 0.5s linear;
+  transform: rotateY(0);
+}
+
+@keyframes redUser {
+        from {
+            transform: rotateY(360deg);
+            border: 3px solid black;
+            background-color: white;
+        }to {
+            transform: rotateY(0);
+            background: #F74A4A;
+            border: initial;
+        }
+}
+
+.yellowUser {
+    background: #F7BC4A;
+  border: initial;
+  animation: yellowUser 0.5s linear;
+  transform: rotateY(0);
+}
+
+@keyframes yellowUser {
+    from {
+        transform: rotateY(360deg);
+        border: 3px solid black;
+        background-color: white;
+    }to {
+        transform: rotateY(0);
+        background: #F7BC4A;
+        border: initial;
+    }
+}
+
+.defaultCell {
+  border: 3px solid black;
+  background-color: white;
+}
+
+
+.turnRed{
+    color: #F74A4A;
+    animation: turnRed 0.5s linear;
+}
+
+@keyframes turnRed {
+    from {
+        color: #F7BC4A;
+        transform: rotateY(360deg);
+    }to {
+        color: #F74A4A;
+        transform: rotateY(0);
+
+    }
+}
+
+
+.turnYellow{
+    color: #F7BC4A;
+    animation: turnYellow 0.5s linear;
+}
+
+@keyframes turnYellow {
+    from {
+        color: #F74A4A;
+        transform: rotateY(360deg);
+    
+    }to {
+        color: #F7BC4A;
+        transform: rotateY(0);
+
+    }
+}
